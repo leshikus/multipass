@@ -14,7 +14,9 @@ jobs:
       - uses: actions/checkout@v3
 
       - run: |
+          set -vx
           sudo snap install multipass
+          ls -l /var/snap/multipass/common/multipass_socket
           multipass launch -n instance ${{ inputs.name }}
           multipass exec instance cat /etc/pollinate/add-user-agent
 
