@@ -17,7 +17,8 @@ jobs:
           set -vx
           sudo snap install multipass
           sudo snap restart multipass.multipassd
-          ls -l /var/snap/multipass/common/multipass_socket || true
+          sudo ls -l /var/snap/multipass/common/multipass_socket || true
+          sudo find /var/snap/multipass
           journalctl --unit 'snap.multipass*'
           sudo snap connections multipass
           sudo cat /var/log/syslog
