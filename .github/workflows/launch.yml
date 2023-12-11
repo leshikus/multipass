@@ -15,12 +15,14 @@ jobs:
 
       - run: |
           set -vx
-          sudo apt-get update
-          sudo apt-get install snap
+          #sudo apt-get update
+          #sudo apt-get install snap
           sudo snap install multipass
-          sudo systemctl restart snapd
-          sudo snap restart multipass.multipassd
+          sudo snap info --all
+          #sudo systemctl restart snapd
+          #sudo snap restart multipass.multipassd
           sudo ls -l /var/snap/multipass/common/multipass_socket || true
+
           sudo find /var/snap/multipass
           journalctl --unit 'snap.multipass*'
           sudo snap connections multipass
