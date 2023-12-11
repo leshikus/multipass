@@ -15,3 +15,6 @@ jobs:
 
       - run: |
           sudo snap install multipass
+          multipass launchi -n instance ${{ inputs.name }}
+          multipass exec instance cat /etc/pollinate/add-user-agent
+

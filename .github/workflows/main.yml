@@ -12,7 +12,7 @@ jobs:
   ubuntu:
     uses: ./.github/workflows/launch.yml
     with:
-      name: ubuntu
+      name: core
 
   docker:
     name: Build
