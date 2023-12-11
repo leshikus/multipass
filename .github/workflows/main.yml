@@ -14,9 +14,8 @@ jobs:
     with:
       name: core
 
-  docker:
-    name: Build
-    uses: ./.github/workflows/launch.yml
-    with:
-      name: docker
+#  docker:
+#    uses: ./.github/workflows/launch.yml
+#    with:
+#      name: docker
 
