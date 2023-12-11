@@ -18,7 +18,7 @@ jobs:
           #sudo apt-get update
           #sudo apt-get install snap
           sudo snap install multipass
-          sudo snap multipass --all
+          multipass info --all
           #sudo systemctl restart snapd
           #sudo snap restart multipass.multipassd
           sudo ls -l /var/snap/multipass/common/multipass_socket || true
