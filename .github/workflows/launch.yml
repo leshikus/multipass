@@ -23,10 +23,10 @@ jobs:
           #sudo snap restart multipass.multipassd
           sudo ls -l /var/snap/multipass/common/multipass_socket || true
 
-          sudo find /var/snap/multipass
-          journalctl --unit 'snap.multipass*'
-          sudo snap connections multipass
-          sudo cat /var/log/syslog
-          multipass launch -n instance ${{ inputs.name }}
-          multipass exec instance cat /etc/pollinate/add-user-agent
+          #          sudo find /var/snap/multipass
+          #journalctl --unit 'snap.multipass*'
+          #sudo snap connections multipass
+          sudo cat /var/log/syslog | grep -i virt
+          #multipass launch -n instance ${{ inputs.name }}
+          #multipass exec instance cat /etc/pollinate/add-user-agent
 
