@@ -1,4 +1,4 @@
-name: Docker image build
+name: Multipass image instance test
 on:
   workflow_call:
     inputs:
@@ -16,6 +16,7 @@ jobs:
       - run: |
           set -vx
           sudo snap install multipass
+          sudo snap restart multipass.multipassd
           ls -l /var/snap/multipass/common/multipass_socket || true
           journalctl --unit 'snap.multipass*'
           sudo snap connections multipass

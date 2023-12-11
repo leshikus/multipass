@@ -1,4 +1,4 @@
-name: Build docker images for HDK
+name: Images in multipass
 on:
   workflow_dispatch:
   push:
