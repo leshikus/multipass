@@ -18,6 +18,8 @@ jobs:
           sudo snap install multipass
           ls -l /var/snap/multipass/common/multipass_socket || true
           journalctl --unit 'snap.multipass*'
+          sudo snap connections multipass
+          sudo cat /var/log/syslog
           multipass launch -n instance ${{ inputs.name }}
           multipass exec instance cat /etc/pollinate/add-user-agent
 
