@@ -26,7 +26,7 @@ jobs:
           #          sudo find /var/snap/multipass
           #journalctl --unit 'snap.multipass*'
           #sudo snap connections multipass
-          sudo cat /var/log/syslog | grep -i virt
+          sudo cat /var/log/syslog | grep -i 'virt|kvm'
           #multipass launch -n instance ${{ inputs.name }}
           #multipass exec instance cat /etc/pollinate/add-user-agent
 
